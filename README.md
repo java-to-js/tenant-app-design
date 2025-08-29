@@ -1,2 +1,2 @@
 # bitantler-ui
-front-end application, developed on angular.
+front-end application for bitantler blogging app.
