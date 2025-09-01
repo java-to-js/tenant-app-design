@@ -463,15 +463,3 @@ notifications
 - Database design supporting multiple properties per owner
 - Microservices consideration
 
-## User Journey Flows
-
-### Owner Onboarding Flow
-1. Register account → 2. Verify email → 3. Complete profile → 4. Add first property → 5. Add rooms → 6. Upload photos → 7. Dashboard overview
-
-### Tenant Onboarding Flow
-1. Owner creates tenant record → 2. Tenant receives invitation → 3. Tenant sets password → 4. Complete profile → 5. View lease details → 6. Access tenant portal
-
-### Rent Collection Flow
-1. System generates monthly invoice → 2. Notification sent to tenant → 3. Owner records payment → 4. System updates status → 5. Receipt generated
-
-This design provides a solid foundation for your tenant management application, with clear separation between MVP and advanced features, allowing for iterative development and user feedback incorporation.
