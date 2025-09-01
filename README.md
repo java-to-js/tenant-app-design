@@ -237,19 +237,57 @@ A tenant management application for homeowners who rent rooms for long-term stay
 ```sql
 users
 ├── user_id (PK)
-├── email (unique)
-├── password_hash
-├── first_name
-├── last_name
-├── phone_number
-├── user_type (owner/tenant)
-├── profile_image_url
+├── user_details_id (FK)
 ├── created_at
 ├── updated_at
 └── is_active
 ```
 
-#### 2. Properties Table
+#### 2. User Details Table
+```sql
+user_details
+├── user_details_id (PK)
+├── email (unique)
+├── password_hash
+├── first_name
+├── last_name
+├── phone_number
+├── address_id
+├── user_type (owner/tenant)
+├── profile_image_url
+├── created_at
+└── updated_at
+```
+
+#### 3. User Address Table
+```sql
+addresses
+├── address_id (PK)
+├── address_one
+├── address_two
+├── city
+├── District
+├── State
+├── zipcode
+├── country_id (FK)
+├── created_at
+├── updated_at
+└── is_active
+```
+
+#### 4. Country Table
+```sql
+country
+├── country_id (PK)
+├── country_code
+├── country_name
+├── continent
+├── created_at
+├── updated_at
+└── is_supported
+```
+
+#### 5. Properties Table
 ```sql
 properties
 ├── property_id (PK)
@@ -267,7 +305,7 @@ properties
 └── updated_at
 ```
 
-#### 3. Rooms Table
+#### 6. Rooms Table
 ```sql
 rooms
 ├── room_id (PK)
@@ -284,18 +322,7 @@ rooms
 └── updated_at
 ```
 
-#### 4. Room Images Table
-```sql
-room_images
-├── image_id (PK)
-├── room_id (FK → rooms.room_id)
-├── image_url
-├── image_description
-├── is_primary
-└── uploaded_at
-```
-
-#### 5. Leases Table
+#### 7. Leases Table
 ```sql
 leases
 ├── lease_id (PK)
@@ -311,23 +338,39 @@ leases
 └── updated_at
 ```
 
-#### 6. Payments Table
+#### 8. Leases_docs
+```sql
+lease_docs
+├── lease_doc_id (PK)
+├── lease_id (FK - lease.lease_id)
+├── lease_doc_url
+├── address_doc_type
+├── address_doc_number
+├── address_doc_url
+├── id_proof_type
+├── id_proof_number
+├── id_proof_url
+├── created_at
+└── updated_at
+```
+
+#### 9. Transaction Table
 ```sql
 payments
-├── payment_id (PK)
+├── transaction_id (PK)
 ├── lease_id (FK → leases.lease_id)
 ├── payment_date
 ├── amount_paid
 ├── payment_method
 ├── payment_status (pending/completed/failed)
 ├── due_date
-├── late_fee
+├── payment_type (rent/utility)
 ├── payment_reference
 ├── created_at
 └── updated_at
 ```
 
-#### 7. Invoices Table
+#### 10. Invoices Table
 ```sql
 invoices
 ├── invoice_id (PK)
@@ -342,9 +385,9 @@ invoices
 └── updated_at
 ```
 
-#### 8. Notifications Table
+#### 11. Notifications Table
 ```sql
-notifications
+notifications_log
 ├── notification_id (PK)
 ├── user_id (FK → users.user_id)
 ├── notification_type
@@ -354,6 +397,39 @@ notifications
 ├── created_at
 └── expires_at
 ```
+
+#### 12. Currency Table
+```sql
+currencies
+├── currency_id (PK)
+├── currency_code
+├── country_id
+├── exchange_rate
+├── is_supported
+├── created_at
+└── modified_at
+```
+
+#### 13. Roles Table
+```sql
+roles
+├── role_id (PK)
+├── role_name
+├── role_type
+├── created_at
+└── modified_at
+```
+
+#### 13. User Roles Table
+```sql
+user_roles
+├── user_role_id (PK)
+├── user_id (FK)
+├── role_id (FK)
+├── created_at
+└── modified_at
+```
+
 
 ## Phase 1 - Must-Have Features (MVP)
 
