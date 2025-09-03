@@ -1,0 +1,84 @@
+src/app/
+│
+├── core/                        # Core services, guards, interceptors
+│
+├── shared/                      # Shared modules, pipes, directives, UI elements
+│   ├── components/
+│   │   ├── card/
+│   │   ├── button/
+│   │   ├── avatar/
+│   │   ├── search-bar/
+│   │   └── ... (other shared UI)
+│   └── pipes/
+│
+├── layout/                      # App-wide layout components
+│   ├── header/
+│   │   ├── app-logo/
+│   │   ├── global-search-bar/
+│   │   ├── notification-bell/
+│   │   ├── user-avatar-menu/
+│   │   └── quick-add-button/
+│   ├── sidebar/
+│   ├── system-status-bar/
+│   └── quick-shortcuts/
+│
+├── dashboard/                   # Dashboard feature module
+│   ├── metrics-cards/
+│   │   ├── total-properties-card/
+│   │   ├── active-tenants-card/
+│   │   ├── monthly-revenue-card/
+│   │   └── pending-actions-card/
+│   ├── recent-activities-feed/
+│   │   ├── activity-timeline/
+│   │   └── activity-filters/
+│   ├── quick-actions-widget/
+│   │   ├── priority-actions/
+│   │   └── upcoming-events/
+│   ├── analytics-section/
+│   │   ├── financial-overview-panel/
+│   │   ├── monthly-revenue-chart/
+│   │   ├── payment-status-breakdown/
+│   │   ├── top-performing-properties/
+│   │   └── collection-rate-trends/
+│   ├── management-widgets/
+│   │   ├── properties-overview-widget/
+│   │   ├── tenant-management-widget/
+│   │   └── financial-management-widget/
+│   └── dashboard.component.ts
+│
+├── properties/                  # Property management feature module
+│   ├── property-card/
+│   ├── room-grid/
+│   ├── room-form/
+│   ├── property-details-panel/
+│   └── properties.component.ts
+│
+├── tenants/                     # Tenant management feature module
+│   ├── tenant-list-table/
+│   ├── tenant-profile-card/
+│   ├── onboarding-wizard/
+│   ├── document-upload/
+│   └── tenants.component.ts
+│
+├── finances/                    # Financial feature module
+│   ├── payment-dashboard/
+│   ├── invoice-generator/
+│   ├── payment-history-table/
+│   ├── financial-reports/
+│   └── finances.component.ts
+│
+├── communications/              # Communication feature module
+│   ├── notification-center/
+│   ├── message-thread/
+│   ├── broadcast-message/
+│   └── communications.component.ts
+│
+├── reports/                     # Reports feature module
+│   └── reports.component.ts
+│
+├── settings/                    # Settings feature module
+│   └── settings.component.ts
+│
+├── app-routing.module.ts
+├── app.component.ts
+└── app.module.ts
