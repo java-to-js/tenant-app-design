@@ -19,8 +19,7 @@ src/app/
 │   │   ├── user-avatar-menu/
 │   │   └── quick-add-button/
 │   ├── sidebar/
-│   ├── system-status-bar/
-│   └── quick-shortcuts/
+│   └── footer/
 │
 ├── dashboard/                   # Dashboard feature module
 │   ├── metrics-cards/
