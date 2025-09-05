@@ -3,6 +3,11 @@
 ## App Overview
 A tenant management application for homeowners who rent rooms for long-term stays. This is an administrative tool focused on managing existing tenant relationships, not a marketplace for finding tenants.
 
+## System Architecture
+
+<img width="1743" height="1252" alt="Screenshot from 2025-09-05 00-14-02" src="https://github.com/user-attachments/assets/e9402b2b-9980-4fb2-b8de-db5f3e43ffcd" />
+
+
 ## Key Features Identification
 
 ### Core User Roles
